@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddEmp</title>
+    <style>
+        form{
+            border:2px solid black;
+            text-align:center;
+        }
+        h1{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+        <h1>Enter Employee Details</h1>
+       
+               <Form id="F1" method="post">
+
+                   <div>
+                       <label for="ID">Employee Id:</label> <input type="text" name="Id" id="Id">
+                   </div><br>
+                   <div>
+                       <label for="Name">Employee Name:</label> <input type="text" name="Name" id="Name">
+                   </div><br>
+                   <div>
+                       <label for="job">Employee Job:</label> <input type="text" name="job" id="job">
+                   </div><br>
+                   <div>
+                       <label for="Salary">Employee Salary:</label> <input type="text" id="Salary" name="Salary">
+                   </div><br>
+                   <div>
+                       <button type="submit" value="Save">Submmit</button>
+                       <button type="reset" value="clear">Clear</button>
+                   </div>
+               </Form>
+
+    </div>
+</body>
+</html>
