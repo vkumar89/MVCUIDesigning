@@ -1,0 +1,28 @@
+﻿@model List<MVCUIDesigning.Models.Customer>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayCustomers</title>
+</head>
+<body>
+    <div>
+        <h2>Customer Details</h2>
+        @foreach(MVCUIDesigning.Models.Customer cust in Model)
+        {
+            Html.RenderPartial("_CustomerView",cust);
+        }
+
+        <br><br><br><br>
+        @foreach(var cust in Model)
+        {
+            Html.RenderPartial("_CustomerView", cust);
+        }
+    </div>
+</body>
+</html>

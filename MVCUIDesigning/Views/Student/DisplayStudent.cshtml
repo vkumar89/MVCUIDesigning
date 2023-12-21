@@ -1,0 +1,57 @@
+﻿@model MVCUIDesigning.Models.Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayStudent</title>
+</head>
+<body>
+    @{string str = @Html.Partial("_header").ToString();
+
+        str = str.Replace("150", "250");
+        MvcHtmlString htmlString = new MvcHtmlString(str);
+
+
+
+    }
+    @htmlString
+    <div>
+        <table border="2" align="center">
+            <th>
+
+                <h1> Student Details</h1>
+            </th>
+            <tr>
+                <td>Student Id</td>
+                <td>@Model.Sid</td>
+            </tr>
+            <tr>
+                <td>Student Name</td>
+                <td>@Model.Name</td>
+            </tr>
+            <tr>
+                <td>Student Class</td>
+                <td>@Model.Class</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>@Model.Gender</td>
+            </tr>
+            <tr>
+                <td>Fees</td>
+                <td>@Model.Fees</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>@Model.Address</td>
+            </tr>
+
+        </table>
+    </div>
+</body>
+</html>

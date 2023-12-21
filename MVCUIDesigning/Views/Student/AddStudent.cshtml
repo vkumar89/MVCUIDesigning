@@ -1,0 +1,41 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddStudent</title>
+</head>
+<body>
+    @Html.Partial("_Header")
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.Label("Student Id:");
+            @Html.TextBox("Sid");<br>
+            @Html.Label("Student Name:");
+            @Html.TextBox("Name");<br>
+            @Html.Label("Student Class:");
+
+            List<int> li = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            SelectList items = new SelectList(li);
+            @Html.DropDownList("Class", items, "-Select Class-");<br />
+            @Html.Label("Gender");<br>
+
+            @Html.RadioButton("Gender", "Male"); @:Male
+            @Html.RadioButton("Gender", "Female"); @:Female <br />
+            @Html.Label("Fees: "); <br />
+            @Html.TextBox("Fees"); <br />
+            @Html.Label("Address: "); <br />
+            @Html.TextArea("Address", "", 3, 21, new { });
+            <br /><br />
+            <input type="submit" value="Save" />
+            <input type="reset" value="Reset" />
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿@model MVCUIDesigning.Models.Student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayStudentST</title>
+</head>
+<body>
+    <div>
+
+
+        <table border="2" align="center">
+            <th>
+
+                <h1> Student Details</h1>
+            </th>
+            <tr>
+                <td>@Html.DisplayNameFor(s=>s.Sid)</td>
+                <td>@Html.DisplayFor(s=>s.Sid)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(s=>s.Name)</td>
+                <td>@Html.DisplayFor(s=>s.Name)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(s => s.Class)</td>
+                <td>@Html.DisplayFor(s => s.Class)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(s => s.Gender)</td>
+                <td>@Html.DisplayFor(s => s.Gender)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(s => s.Fees)</td>
+                <td>@Html.DisplayFor(s => s.Fees)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(s => s.Address)</td>
+                <td>@Html.DisplayFor(s => s.Address)</td>
+            </tr>
+
+        </table>
+        @{ 
+            Html.RenderAction("Header");
+        }
+
+
+    </div>
+</body>
+</html>
